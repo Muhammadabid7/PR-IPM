@@ -47,4 +47,4 @@
 - Pantau ukuran bundle; gunakan code-splitting jika dibutuhkan di masa depan.
 
 ---
-Crafted for PR IPM SMKM 1 – fokus pada keandalan data dan kemudahan operasional.***
+Crafted for PR IPM SMKM 1 – fokus pada keandalan data dan kemudahan operasional.
