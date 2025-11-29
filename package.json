@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@botpress/webchat": "^4.0.4",
     "firebase": "^12.6.0",
     "jspdf": "^3.0.4",
     "lucide-react": "^0.555.0",
