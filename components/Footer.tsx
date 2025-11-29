@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
           
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo.png" alt="Logo IPM" className="h-10 w-auto" />
+              <img src="https://github.com/Muhammadabid7/PR-IPM/raw/main/logo.png" alt="Logo IPM" className="h-10 w-auto" />
               <span className="font-bold text-xl tracking-tight text-slate-800 dark:text-slate-100">
                 PR IPM <span className="text-yellow-600 dark:text-yellow-400">SMKM 1</span>
               </span>
