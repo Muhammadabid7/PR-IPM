@@ -11,6 +11,27 @@ export const Hero: React.FC<HeroProps> = ({ content = defaultHomepageConfig }) =
     backgroundImage: `linear-gradient(135deg, ${content.accentFrom}, ${content.accentTo})`
   };
 
+  const stats = [
+    {
+      value: content.statPrimaryValue || defaultHomepageConfig.statPrimaryValue,
+      label: content.statPrimaryLabel || defaultHomepageConfig.statPrimaryLabel,
+      sub: content.statPrimarySub || defaultHomepageConfig.statPrimarySub
+    },
+    {
+      value: content.statSecondaryValue || defaultHomepageConfig.statSecondaryValue,
+      label: content.statSecondaryLabel || defaultHomepageConfig.statSecondaryLabel,
+      sub: content.statSecondarySub || defaultHomepageConfig.statSecondarySub
+    },
+    {
+      value: content.statTertiaryValue || defaultHomepageConfig.statTertiaryValue,
+      label: content.statTertiaryLabel || defaultHomepageConfig.statTertiaryLabel,
+      sub: content.statTertiarySub || defaultHomepageConfig.statTertiarySub
+    }
+  ];
+
+  const primaryCtaLabel = content.ctaButtonLabel || defaultHomepageConfig.ctaButtonLabel;
+  const primaryCtaLink = content.ctaButtonLink || defaultHomepageConfig.ctaButtonLink;
+
   return (
     <section id="home" className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
       {/* Background Pattern */}
@@ -60,8 +81,8 @@ export const Hero: React.FC<HeroProps> = ({ content = defaultHomepageConfig }) =
               data-aos-delay="600"
               className="flex flex-wrap gap-4"
             >
-              <a href="#profile" className="px-8 py-3 rounded-xl bg-slate-900 dark:bg-yellow-500 text-white dark:text-slate-900 font-semibold hover:bg-slate-800 dark:hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                Profil Pimpinan
+              <a href={primaryCtaLink} className="px-8 py-3 rounded-xl bg-slate-900 dark:bg-yellow-500 text-white dark:text-slate-900 font-semibold hover:bg-slate-800 dark:hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                {primaryCtaLabel}
               </a>
               <a href="#roadmap" className="px-8 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
                 Strategi 2025
@@ -73,18 +94,13 @@ export const Hero: React.FC<HeroProps> = ({ content = defaultHomepageConfig }) =
               data-aos-delay="800"
               className="pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 sm:grid-cols-3 gap-6"
             >
-              <div className="flex flex-col">
-                <span className="text-3xl font-bold text-slate-900 dark:text-white">#184</span>
-                <span className="text-sm text-slate-500 dark:text-slate-400">Nasional (MyIPM)</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-3xl font-bold text-slate-900 dark:text-white">TM 1</span>
-                <span className="text-sm text-slate-500 dark:text-slate-400">Standar Kaderisasi</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-3xl font-bold text-slate-900 dark:text-white">A+</span>
-                <span className="text-sm text-slate-500 dark:text-slate-400">Administrasi</span>
-              </div>
+              {stats.map((stat, index) => (
+                <div key={stat.label + index} className="flex flex-col">
+                  <span className="text-3xl font-bold text-slate-900 dark:text-white">{stat.value}</span>
+                  <span className="text-sm text-slate-500 dark:text-slate-400">{stat.label}</span>
+                  <span className="text-xs text-slate-500 dark:text-slate-400">{stat.sub}</span>
+                </div>
+              ))}
             </div>
           </div>
 
