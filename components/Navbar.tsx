@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center gap-2">
-            <img src="/logo.png" alt="Logo IPM" className="h-10 w-auto drop-shadow-sm" />
+            <img src="https://github.com/Muhammadabid7/PR-IPM/raw/main/logo.png" alt="Logo IPM" className="h-10 w-auto drop-shadow-sm" />
             <span className="font-bold text-xl tracking-tight text-slate-800 dark:text-slate-100 hidden sm:inline">
               PR IPM <span className="text-yellow-600 dark:text-yellow-400">SMKM 1</span>
             </span>
